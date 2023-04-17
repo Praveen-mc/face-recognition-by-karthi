@@ -25,7 +25,7 @@ while True:
                 #find first match
                 if True in matches:
                         first_known_face = matches.index(True)
-                        file=open("C:\\Users\\Admin\\Documents\\face_lock\\FACE LOCK CHECKING FILE.txt","r")
+                        file=open("C:YourFile.txt","r")
                         print(file.read())
                         face_is_match = True
                 
