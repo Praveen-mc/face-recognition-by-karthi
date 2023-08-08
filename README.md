@@ -1,4 +1,4 @@
-# Face-lock
+# File-vault
 A face recognition desktop app created in python to protect your private files and directories by generating a user's face id .
 
 Dependencies for usage:
