@@ -18,7 +18,7 @@ A face recognition desktop app created in python to protect your private files a
   ```
   Run the api.py file and this file starts encoding the image that you saved in the face_db folder and creates a
   encode.pickle file in the face_db folder.
-  > &#9432;Note:
+  > &#9432; Note:
   > Don't run the api.py file after it encoded the photo.
   
  ### **Step 2:**
@@ -28,6 +28,6 @@ A face recognition desktop app created in python to protect your private files a
 ### **Step 3:**  
    Now run the lock.py file and the camera window pops up and if it matches the file opens or else it'll throw access     denied message.
    
-> &#9432;Note:
+> &#9432; Note:
 >  If you find find any errors while importing any packages, kindly downgrade your python interpreter version.
   
