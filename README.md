@@ -22,11 +22,14 @@ A face recognition desktop app created in python to protect your private files a
   > Don't run the api.py file after it encoded the photo.
   
  ### **Step 2:**
-   After step 1 is over , now open the OpenImg.py file and add the file path of an image that you want to
-   hide. And run the file.  
+   After step 1 is over , now open the OpenImg.py file check if any errors occur by giving a file path of an image in 
+   the commented set of codes and   if it runs successfully undo all your changes and comment the lines that were     
+   commented before.    
 
 ### **Step 3:**  
-   Now run the lock.py file and the camera window pops up and if it matches the file opens or else it'll throw access     denied message.
+   Now open the lock.py file and pass the file path of the image as an argument to the function 
+   `d.open_image(image_path)`.Now run the file and the camera window pops up and if it matches the file opens or else 
+   it'll throw access denied message.
    
 > &#9432; Note:
 >  If you find find any errors while importing any packages, kindly downgrade your python interpreter version.
