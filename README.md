@@ -1,16 +1,30 @@
 # File-vault
-A face recognition desktop app created in python to protect your private files and directories by generating a user's face id .
+A face recognition desktop app created in python to protect your private files and directories by generating a user's face id and if matches it'll open the file.
 
 Dependencies for usage:
   1. Python 3.0 or plus.
   2. face_recognition library from python.org and all its dependencies
+  3. import PIL to open the image.
 
 Instructions for usage:
  Step 1:
-  facelock.py is the GUI for using this app, user needs to first select its face image from desktop, this will generate a file named as 'facepath.txt' , this file 'facepath.txt' is to be cut and should be pasted at the location where the file that is to be protected is stored.
+  First user need to add their photo in the face_db which is considered as the dataset in this project.
+  Import all necessary packages using the command :-
+  ```
+  pip install face-recognition
+  pip install opencv-python
+  pip install pillow
+  ```
+  Run the api.py file and this file starts encoding the image that you saved in the face_db folder and creates a
+  encode.pickle file in the face_db folder.
+  > [!Note: Don't run the api.py file after it encoding the photo.]
   
   Step 2:
-   After step 1 is over , now user can select file or directory using facelock.py (GUI) that is to be protected. A python file with same name with file extension will be generated at that location , which is used to protect that file, whenever that file is tried to be open, laptop camera will be initiated and current user's image will be compared with file owner's image, and origiinal file will only open on successfull comparison.
+   After step 1 is over , now write the OpenImg.py file and the file path of an image that you want to
+   hide. And run the file.  
+
+  Step 3:  
+   Now run the lock.py file and the camera window pops up and if it matches the file opens or else it'll throw access     denied message.
    
-NOTE:- Only for windows OS users
+> [NOTE: If you find find any errors while importing any packages, kindly downgrade your python interpreter version.]
   
