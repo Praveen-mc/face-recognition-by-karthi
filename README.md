@@ -18,7 +18,7 @@ A face recognition desktop app created in python to protect your private files a
   ```
   Run the api.py file and this file starts encoding the image that you saved in the face_db folder and creates a
   encode.pickle file in the face_db folder.
-  > [!Note:]
+  > !Note:
   > [Don't run the api.py file after it encoded the photo.]
   
  ### **Step 2:**
