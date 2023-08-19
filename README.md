@@ -6,7 +6,7 @@ A face recognition desktop app created in python to protect your private files a
   2. face_recognition library from python.org and all its dependencies
   3. import PIL to open the image.
 
-## Instructions for usage:
+##[!Instructions for usage:]
  
  ### **Step 1:**
   First user need to add their photo in the face_db which is considered as the dataset in this project.
