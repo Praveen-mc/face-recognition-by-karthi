@@ -2,15 +2,16 @@ import face_recognition as fr
 import pickle
 import cv2
 import os
-import FileView as f
+import OpenImg as d
+
 cascPath=os.path.dirname(cv2.__file__)+"/data/haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascPath)
 capture = cv2.VideoCapture(0) #capturing video
 video_capture = cv2.VideoCapture(0)
 face_is_match = False
 face_encodings = []
-known_face_encodings = pickle.load(open('C:\\Users\\LENOVO\\Desktop\\sample\\face-recognition-vault\\face_db\\encode.pickle','rb'))
-      
+known_face_encodings = pickle.load(open('C:\\face_db\\encode.pickle','rb')) #Paste your file location  
+  
 while True:
         ret, frame = video_capture.read()
         face_locations = fr.face_locations(frame, model="hog")
@@ -33,11 +34,9 @@ while True:
                         break       
 
         if face_is_match==True:
-        #        file=open(".//Demo.txt","r")
-        #        print(file.read())
                 print("Opening...")
-                
-                import FileView as f
+                d.open_image("C:\\have a good day project.png") #Paste your file location  
+                break 
                 
         else:
               print("Access Denied")
@@ -62,7 +61,7 @@ while True:
         # Display the resulting frame
         cv2.imshow('Video', frame)
 
-        if cv2.waitKey(1) & 0xFF == ord('p'):
+        if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
         #break
         
