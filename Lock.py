@@ -3,6 +3,8 @@ import pickle
 import cv2
 import os
 import OpenImg as d
+from tkinter import *  
+from tkinter import messagebox  
 
 cascPath=os.path.dirname(cv2.__file__)+"/data/haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascPath)
@@ -10,8 +12,8 @@ capture = cv2.VideoCapture(0) #capturing video
 video_capture = cv2.VideoCapture(0)
 face_is_match = False
 face_encodings = []
-known_face_encodings = pickle.load(open('C:\\face_db\\encode.pickle','rb')) #Paste your file location  
-  
+known_face_encodings = pickle.load(open('C:\\Users\\LENOVO\\Desktop\\sample\\face-recognition-vault\\face_db\\encode.pickle','rb'))
+      
 while True:
         ret, frame = video_capture.read()
         face_locations = fr.face_locations(frame, model="hog")
@@ -30,16 +32,20 @@ while True:
                 
                 else:
                         face_is_match = False
-                        #print("Access Denied")
                         break       
 
         if face_is_match==True:
                 print("Opening...")
-                d.open_image("C:\\have a good day project.png") #Paste your file location  
+                d.open_image("C:\\Users\\LENOVO\\Desktop\\sample\\face-recognition-vault\\have a good day project.png")
                 break 
                 
         else:
-              print("Access Denied")
+        #       print("Access Denied")
+              top = Tk()  
+              top.geometry("100x100")  
+              messagebox.showwarning("warning","Access Denied")  
+              break 
+        #       top.mainloop()
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
         faces = faceCascade.detectMultiScale(
@@ -68,3 +74,6 @@ while True:
 capture.release()
 cv2.destroyAllWindows()
                
+
+  
+  
