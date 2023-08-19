@@ -22,7 +22,7 @@ A face recognition desktop app created in python to protect your private files a
   > Don't run the api.py file after it encoded the photo.
   
  ### **Step 2:**
-   After step 1 is over , now write the OpenImg.py file and the file path of an image that you want to
+   After step 1 is over , now open the OpenImg.py file and add the file path of an image that you want to
    hide. And run the file.  
 
 ### **Step 3:**  
