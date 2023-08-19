@@ -7,6 +7,7 @@ Dependencies for usage:
   3. import PIL to open the image.
 
 Instructions for usage:
+ 
  **Step 1:**
   First user need to add their photo in the face_db which is considered as the dataset in this project.
   Import all necessary packages using the command :-
